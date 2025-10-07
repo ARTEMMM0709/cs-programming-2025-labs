@@ -1,6 +1,5 @@
-print('введите имя')
-user_name = input()
-print('введите возраст')
-user_age = input()
+name = input("Введите ваше имя: ")
+age = input("Введите ваш возраст: ")
+
 for i in range(10):
-    print(f'Меня зовут {user_name} и мне {user_age} лет')
+    print(f"Меня зовут {name} и мне {age} лет")
