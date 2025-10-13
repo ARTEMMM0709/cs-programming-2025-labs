@@ -1,9 +1,8 @@
-temp_num_array = [0,1]
-print('введите число')
-user_num = int(input())
-temp_sum = 0
-while(user_num>temp_sum):
-    temp_sum = temp_num_array[0]+temp_num_array[1]
-    print(temp_sum)
-    temp_num_array[0] = temp_num_array[1]
-    temp_num_array[1] = temp_sum
+limit = int(input("Введите число для вывода чисел Фибоначчи: "))
+
+a, b = 0, 1
+print(f"Числа Фибоначчи до {limit}:")
+while a <= limit:
+    print(a, end=" ")
+    a, b = b, a + b
+print()
