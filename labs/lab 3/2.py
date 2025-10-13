@@ -1,5 +1,10 @@
-print('введите число')
-number = int(input())
-for i in range (10):
-   print(f'{number} * {i + 1} = {number * (i+1)}') 
+number = int(input("Введите число от 1 до 9: "))
+
+if 1 <= number <= 9:
+    print(f"Таблица умножения для числа {number}:")
+    for i in range(1, 11):
+        result = number * i
+        print(f"{number} * {i} = {result}")
+else:
+    print("Ошибка! Введите число от 1 до 9.")
    
