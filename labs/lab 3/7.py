@@ -1,6 +1,7 @@
-print('введите текст')
-user_input = input()
-temp_str = ''
-for i in range(len(user_input)):
-    temp_str += user_input[i] +f'{i+1}'
-print(temp_str)
+text = input("Введите строку: ")
+
+result = ""
+for i, char in enumerate(text, 1):
+    result += char + str(i)
+
+print(f"Результат: {result}")
