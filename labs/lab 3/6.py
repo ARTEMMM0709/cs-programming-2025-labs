@@ -1,8 +1,5 @@
-limit = int(input("Введите число для вывода чисел Фибоначчи: "))
-
+n = int(input("Введите число: "))
 a, b = 0, 1
-print(f"Числа Фибоначчи до {limit}:")
-while a <= limit:
-    print(a, end=" ")
+while a <= n:
+    print(a)
     a, b = b, a + b
-print()
