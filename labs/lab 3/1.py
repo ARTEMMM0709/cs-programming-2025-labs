@@ -1,5 +1,4 @@
-name = input("Введите ваше имя: ")
-age = input("Введите ваш возраст: ")
-
+name = input("Введите имя: ")
+age = input("Введите возраст: ")
 for i in range(10):
     print(f"Меня зовут {name} и мне {age} лет")
