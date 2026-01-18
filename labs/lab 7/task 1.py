@@ -1,12 +1,19 @@
+# Программа отсортирует объекты по второму элементу кортежа (числу)
+# Исходный список кортежей: каждый содержит название объекта и уровень угрозы
 objects = [
-    ("Containment Cell A", 4),
-    ("Archive Vault", 1),
-    ("Bio Lab Sector", 3),
-    ("Observation Wing", 2)
+    ("Containment Cell A", 4),  # Объект с уровнем угрозы 4
+    ("Archive Vault", 1),       # Объект с уровнем угрозы 1
+    ("Bio Lab Sector", 3),      # Объект с уровнем угрозы 3
+    ("Observation Wing", 2)     # Объект с уровнем угрозы 2
 ]
 
-# Сортировка объектов по уровню угрозы
-sorted_objects = sorted(objects, key=lambda x: x[1])
-print("Объекты, отсортированные по уровню угрозы:")
-for obj in sorted_objects:
-    print(f"{obj[0]} - Уровень угрозы: {obj[1]}")
+# Сортировка списка objects по второму элементу каждого кортежа (уровню угрозы)
+# key=lambda item: item[1] - функция извлекает уровень угрозы для сравнения
+sorted_objects = sorted(objects, key=lambda item: item[1])
+
+# Вывод заголовка для понятности вывода
+print("Объекты по возрастанию уровня угрозы: ")
+
+# Печать отсортированного списка
+# Результат: от Archive Vault (1) до Containment Cell A (4)
+print(sorted_objects)

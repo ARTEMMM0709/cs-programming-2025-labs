@@ -1,16 +1,23 @@
+# Создание списка словарей с результатами психологических оценок сотрудников
+# Каждый словарь содержит имя сотрудника и его оценку
 evaluations = [
-    {"name": "Agent Cole", "score": 78},
-    {"name": "Dr. Weiss", "score": 92},
-    {"name": "Technician Moore", "score": 61},
-    {"name": "Researcher Lin", "score": 88}
+    {"name": "Agent Cole", "score": 78},           # Оценка 78
+    {"name": "Dr. Weiss", "score": 92},            # Оценка 92
+    {"name": "Technician Moore", "score": 61},     # Оценка 61
+    {"name": "Researcher Lin", "score": 88}        # Оценка 88
 ]
 
-# Определение сотрудника с наивысшей оценкой
-best_employee = max(evaluations, key=lambda emp: emp["score"])
+# Поиск сотрудника с максимальной оценкой:
+# max() находит элемент с максимальным значением ключа "score"
+# key=lambda x: x["score"] указывает сравнивать по полю "score"
+top_eval = max(evaluations, key=lambda x: x["score"])
 
-print(f"Сотрудник с наивысшей оценкой: {best_employee['name']} - {best_employee['score']} баллов")
+# Создание форматированной строки с именем и оценкой лучшего сотрудника
+result = f"{top_eval['name']} - {top_eval['score']}"
 
-# Дополнительно: вывод всех оценок для наглядности
-print("\nВсе оценки сотрудников:")
-for emp in evaluations:
-    print(f"{emp['name']}: {emp['score']} баллов")
+# Вывод поясняющего заголовка
+print("Сотрудник с наивысшей психологической оценкой: ")
+
+# Вывод результата
+# Результат: "Dr. Weiss - 92" (так как 92 - максимальная оценка)
+print(result)

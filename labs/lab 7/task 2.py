@@ -1,17 +1,20 @@
+# Создание списка словарей с данными сотрудников
+# Каждый словарь содержит имя, стоимость смены и количество смен
 staff_shifts = [
     {"name": "Dr. Shaw", "shift_cost": 120, "shifts": 15},
     {"name": "Agent Torres", "shift_cost": 90, "shifts": 22},
     {"name": "Researcher Hall", "shift_cost": 150, "shifts": 10}
 ]
 
-# Создание списка общей стоимости работы каждого сотрудника
-total_costs = list(map(lambda emp: emp["shift_cost"] * emp["shifts"], staff_shifts))
-print("Общая стоимость работы каждого сотрудника:", total_costs)
+# Использование map() с lambda-функцией для вычисления общей стоимости для каждого сотрудника
+# Lambda умножает shift_cost на shifts для каждого словаря person
+costs = list(map(lambda person: person["shift_cost"] * person["shifts"], staff_shifts))
 
-# Нахождение максимальной стоимости
-max_cost = max(total_costs)
-print(f"Максимальная стоимость работы: {max_cost}")
+# Вывод списка общих стоимостей
+print("Список общей стоимости:", costs)
 
-# Если нужно также узнать имя сотрудника с максимальной стоимостью:
-max_employee = max(staff_shifts, key=lambda emp: emp["shift_cost"] * emp["shifts"])
-print(f"Сотрудник с максимальной стоимостью: {max_employee['name']} - {max_employee['shift_cost'] * max_employee['shifts']}")
+# Поиск максимального значения в списке costs
+max_cost = max(costs)
+
+# Вывод максимальной стоимости
+print("Максимальная стоимость:", max_cost)

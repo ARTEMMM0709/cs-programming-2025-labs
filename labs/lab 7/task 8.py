@@ -1,16 +1,20 @@
+# Создание списка кортежей с протоколами безопасности
+# Каждый кортеж содержит название протокола и уровень критичности
 protocols = [
-    ("Lockdown", 5),
-    ("Evacuation", 4),
-    ("Data Wipe", 3),
-    ("Routine Scan", 1)
+    ("Lockdown", 5),        # Протокол "Lockdown" с критичностью 5
+    ("Evacuation", 4),      # Протокол "Evacuation" с критичностью 4
+    ("Data Wipe", 3),       # Протокол "Data Wipe" с критичностью 3
+    ("Routine Scan", 1)     # Протокол "Routine Scan" с критичностью 1
 ]
 
-# Создание нового списка строк по заданному формату
-formatted_protocols = list(map(
-    lambda protocol: f"Protocol {protocol[0]} - Criticality {protocol[1]}",
-    protocols
-))
+# Преобразование каждого кортежа в отформатированную строку:
+# map() применяет lambda-функцию к каждому кортежу p в списке protocols
+# f-строка создает текст вида "Protocol [название] - Criticality [уровень]"
+formatted_protocols = list(map(lambda p: f"Protocol {p[0]} - Criticality {p[1]}", protocols))
 
-print("Форматированные протоколы:")
-for protocol in formatted_protocols:
-    print(protocol)
+# Вывод поясняющего заголовка
+print("Протоколы безопасности и уровни их критичности: ")
+
+# Вывод отформатированного списка строк
+# Результат: список строк вида "Protocol Lockdown - Criticality 5" и т.д.
+print(formatted_protocols)
