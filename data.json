@@ -1,0 +1,139 @@
+{
+    "tanks": [
+        {
+            "id": "T1",
+            "fuel_type": "АИ-92",
+            "max_volume": 20000,
+            "current_volume": 14977.0,
+            "min_level": 1000,
+            "enabled": true,
+            "blocked": true
+        },
+        {
+            "id": "T2",
+            "fuel_type": "АИ-95",
+            "max_volume": 20000,
+            "current_volume": 12000,
+            "min_level": 1000,
+            "enabled": true,
+            "blocked": true
+        },
+        {
+            "id": "T3",
+            "fuel_type": "АИ-95",
+            "max_volume": 20000,
+            "current_volume": 15800.0,
+            "min_level": 1000,
+            "enabled": true,
+            "blocked": true
+        },
+        {
+            "id": "T4",
+            "fuel_type": "АИ-98",
+            "max_volume": 15000,
+            "current_volume": 10000,
+            "min_level": 1000,
+            "enabled": false,
+            "blocked": true
+        },
+        {
+            "id": "T5",
+            "fuel_type": "ДТ",
+            "max_volume": 25000,
+            "current_volume": 20000,
+            "min_level": 1000,
+            "enabled": false,
+            "blocked": true
+        }
+    ],
+    "dispensers": [
+        {
+            "id": 1,
+            "connections": {
+                "АИ-92": "T1",
+                "АИ-95": "T2"
+            }
+        },
+        {
+            "id": 2,
+            "connections": {
+                "АИ-92": "T1",
+                "АИ-95": "T2"
+            }
+        },
+        {
+            "id": 3,
+            "connections": {
+                "АИ-92": "T1",
+                "АИ-95": "T2",
+                "АИ-98": "T4",
+                "ДТ": "T5"
+            }
+        },
+        {
+            "id": 4,
+            "connections": {
+                "АИ-92": "T1",
+                "АИ-95": "T2",
+                "АИ-98": "T4",
+                "ДТ": "T5"
+            }
+        },
+        {
+            "id": 5,
+            "connections": {
+                "АИ-92": "T1",
+                "АИ-95": "T3",
+                "АИ-98": "T4",
+                "ДТ": "T5"
+            }
+        },
+        {
+            "id": 6,
+            "connections": {
+                "АИ-92": "T1",
+                "АИ-95": "T3",
+                "АИ-98": "T4",
+                "ДТ": "T5"
+            }
+        },
+        {
+            "id": 7,
+            "connections": {
+                "АИ-95": "T3",
+                "ДТ": "T5"
+            }
+        },
+        {
+            "id": 8,
+            "connections": {
+                "АИ-95": "T3",
+                "ДТ": "T5"
+            }
+        }
+    ],
+    "stats": {
+        "income": 1150.0,
+        "cars": 1,
+        "liters": {
+            "АИ-92": 23.0,
+            "АИ-95": 0,
+            "АИ-98": 0,
+            "ДТ": 0
+        },
+        "fuel_income": {
+            "АИ-92": 1150.0,
+            "АИ-95": 0,
+            "АИ-98": 0,
+            "ДТ": 0
+        }
+    },
+    "history": [
+        "2026-01-29 12:36:21.308635 - Продажа АИ-92 23.0 л",
+        "2026-01-29 12:36:57.503222 - АВАРИЯ",
+        "2026-01-29 12:37:08.532772 - АВАРИЯ",
+        "2026-01-29 12:40:02.125500 - Пополнение T3 15000.0 л",
+        "2026-01-29 13:14:38.109154 - АВАРИЯ"
+    ],
+    "emergency_mode": false
+}
